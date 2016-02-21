@@ -5,4 +5,18 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="bugs">Report Bugs</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="comm">Communicate</string>
+    <string name="share">Share Current Page</string>
+    <string name="contributors">Contributors:</string>
+    <string name="about">About App</string>
+    <string name="feedback">Comments or Suggestions?</string>
+    <string name="devBy">Developed by:</string>
+    <string name="rp">Robert Pelger (SaguraKirux)</string>
+    <string name="logoImg">Icon by:</string>
+    <string name="title_activity_nav_adapter">NavAdapter</string>
+    <string name="title_activity_nav_drawer">NavDrawer</string>
+
+
 </resources>
