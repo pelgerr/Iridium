@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         view = (WebView) this.findViewById(R.id.Web_View);
+
         view.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView view, int progress) {
                 //Make the bar disappear after URL is loaded, and changes string to Loading...
@@ -50,14 +51,6 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
-        String url = "http://forum.iridiumbased.com/";
-        view.getSettings().setJavaScriptEnabled(true);
-        // Some web pages need these settings to render properly in WebView
-        view.getSettings().setLoadWithOverviewMode(true);
-        view.getSettings().setUseWideViewPort(true);
-        view.getSettings().setBuiltInZoomControls(true);
-        view.getSettings().setDisplayZoomControls(false);
-        view.loadUrl(url);
 
         // Create a WebView client to handle URLs locally
         view.setWebViewClient(new WebViewClient() {
@@ -67,6 +60,15 @@ public class MainActivity extends AppCompatActivity
                 return false;
             }
         });
+
+        String url = "http://forum.iridiumbased.com/";
+        view.getSettings().setJavaScriptEnabled(true);
+        // Some web pages need these settings to render properly in WebView
+        view.getSettings().setLoadWithOverviewMode(true);
+        view.getSettings().setUseWideViewPort(true);
+        view.getSettings().setBuiltInZoomControls(true);
+        view.getSettings().setDisplayZoomControls(false);
+        view.loadUrl(url);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -147,6 +149,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.shoutbox) {
             view.loadUrl("http://forum.iridiumbased.com/taigachat/");
             return true;
+        } else if (id == R.id.pop_content) {
+            view.loadUrl("http://forum.iridiumbased.com/find-popular/content");
         } else if (id == R.id.inbox) {
             view.loadUrl("http://forum.iridiumbased.com/conversations/");
             return true;
@@ -161,7 +165,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.feedback){
             String uriText =
                     "mailto:rpelger1004@gmail.com" +
-                            "?subject=" + Uri.encode("Regarding Iridium...");
+                            "?subject=" + Uri.encode("Regarding Iridium App...");
             Uri uri = Uri.parse(uriText);
             Intent i = new Intent(Intent.ACTION_SENDTO);
             i.setData(uri);
@@ -190,24 +194,15 @@ public class MainActivity extends AppCompatActivity
     public void BugReport() {
         String uriText =
                 "mailto:rpelger1004@gmail.com" +
-                        "?subject=" + Uri.encode("PFRef Bug Report...");
-        File outputFile = new File(Environment.getExternalStorageDirectory(),
-                "logcat.txt");
-        try {
-            Runtime.getRuntime().exec(
-                    "logcat -f " + outputFile.getAbsolutePath());
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+                        "?subject=" + Uri.encode("Iridium App Bug Report...");
+
         Uri uri = Uri.parse(uriText);
         Intent i = new Intent(Intent.ACTION_SENDTO);
         i.setData(uri);
-        i.putExtra(Intent.EXTRA_STREAM, outputFile.getAbsolutePath());
         try {
-            startActivity(Intent.createChooser(i, "Send mail..."));
+            startActivity(Intent.createChooser(i, "Send e-mail..."));
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(MainActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "There are no e-mail clients installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }
