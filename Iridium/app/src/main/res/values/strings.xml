@@ -20,6 +20,7 @@
     <string name="navigate">Navigate</string>
     <string name="search">Search</string>
     <string name="profile">Profile</string>
+    <string name="feed">News Feed</string>
     <string name="forums">Iridium Based Forums</string>
     <string name="new_posts">New Posts</string>
     <string name="shoutbox">Shoutbox</string>
@@ -27,6 +28,7 @@
     <string name="inbox">Inbox</string>
     <string name="alerts">Alerts</string>
     <string name="my_account">My Account</string>
+    <string name="iridium_news">Iridium News</string>
     <string name="announcements">Announcements</string>
     <string name="progress">Progress Updates</string>
     <string name="dev_blog">Developer Blog</string>
@@ -34,7 +36,16 @@
     <string name="message_boards">Message Boards</string>
     <string name="bug_reports">Bug Reports</string>
     <string name="staff">Staff</string>
-    <string name="feed">News Feed</string>
+    <string name="team_info">Team Info</string>
+    <string name="dev_info">Development Information</string>
+    <string name="offline_chat">Offline Chat</string>
+    <string name="aqua">Aqua Polis Square</string>
+    <string name="events">Events</string>
+    <string name="art_gallery">Art Gallery</string>
+    <string name="multimedia">Multimedia</string>
+    <string name="role_play">Role Play</string>
+    <string name="lost_grounds">Lost Grounds</string>
+    <string name="ooc">Out-of-Character</string>
 
 
 </resources>

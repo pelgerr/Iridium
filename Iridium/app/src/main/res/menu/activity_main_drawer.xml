@@ -46,6 +46,35 @@
         </menu>
     </item>
 
+    <item android:title="@string/root_town">
+        <menu>
+            <item
+                android:id="@+id/search"
+                android:icon="@drawable/ic_search"
+                android:title="@string/search" />
+            <item
+                android:id="@+id/account"
+                android:icon="@drawable/ic_action_user"
+                android:title="@string/my_account" />
+            <item
+                android:id="@+id/forums"
+                android:icon="@drawable/ic_view_carousel"
+                android:title="@string/forums" />
+            <item
+                android:id="@+id/new_posts"
+                android:icon="@drawable/ic_view_list"
+                android:title="@string/new_posts" />
+            <item
+                android:id="@+id/shoutbox"
+                android:icon="@drawable/ic_action_dialog"
+                android:title="@string/shoutbox" />
+            <item
+                android:id="@+id/pop_content"
+                android:icon="@drawable/ic_action_star_10"
+                android:title="@string/pop_content" />
+        </menu>
+    </item>
+
     <item android:title="@string/comm">
         <menu>
             <item

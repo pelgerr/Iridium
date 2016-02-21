@@ -151,6 +151,7 @@ public class MainActivity extends AppCompatActivity
             return true;
         } else if (id == R.id.pop_content) {
             view.loadUrl("http://forum.iridiumbased.com/find-popular/content");
+            return true;
         } else if (id == R.id.inbox) {
             view.loadUrl("http://forum.iridiumbased.com/conversations/");
             return true;
