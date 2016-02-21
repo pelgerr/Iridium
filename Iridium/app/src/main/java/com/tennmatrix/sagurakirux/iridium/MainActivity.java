@@ -18,10 +18,14 @@ import android.view.MenuItem;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -74,7 +78,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -125,14 +132,36 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.search) {
+            view.loadUrl("http://forum.iridiumbased.com/search/?type=post");
+            return true;
+        } else if (id == R.id.account) {
+            view.loadUrl("http://forum.iridiumbased.com/account/");
+            return true;
+        } else if (id == R.id.forums) {
+            view.loadUrl("http://forum.iridiumbased.com/");
+            return true;
+        } else if (id == R.id.new_posts) {
+            view.loadUrl("http://forum.iridiumbased.com/find-new/posts");
+            return true;
+        } else if (id == R.id.shoutbox) {
+            view.loadUrl("http://forum.iridiumbased.com/taigachat/");
+            return true;
+        } else if (id == R.id.inbox) {
+            view.loadUrl("http://forum.iridiumbased.com/conversations/");
+            return true;
+        } else if (id == R.id.alerts) {
+            view.loadUrl("http://forum.iridiumbased.com/account/alerts");
+            return true;
+        } else if (id == R.id.feed) {
+            view.loadUrl("http://forum.iridiumbased.com/account/news-feed");
+            return true;
 
          // General feedback
         } else if (id == R.id.feedback){
             String uriText =
                     "mailto:rpelger1004@gmail.com" +
-                            "?subject=" + Uri.encode("Regarding PFRef...");
+                            "?subject=" + Uri.encode("Regarding Iridium...");
             Uri uri = Uri.parse(uriText);
             Intent i = new Intent(Intent.ACTION_SENDTO);
             i.setData(uri);

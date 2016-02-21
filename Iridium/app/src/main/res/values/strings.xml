@@ -15,8 +15,26 @@
     <string name="devBy">Developed by:</string>
     <string name="rp">Robert Pelger (SaguraKirux)</string>
     <string name="logoImg">Icon by:</string>
-    <string name="title_activity_nav_adapter">NavAdapter</string>
-    <string name="title_activity_nav_drawer">NavDrawer</string>
+    <string name="actions">Actions</string>
+    <string name="root_town">Root Town</string>
+    <string name="navigate">Navigate</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="forums">Iridium Based Forums</string>
+    <string name="new_posts">New Posts</string>
+    <string name="shoutbox">Shoutbox</string>
+    <string name="pop_content">Popular Content</string>
+    <string name="inbox">Inbox</string>
+    <string name="alerts">Alerts</string>
+    <string name="my_account">My Account</string>
+    <string name="announcements">Announcements</string>
+    <string name="progress">Progress Updates</string>
+    <string name="dev_blog">Developer Blog</string>
+    <string name="the_world">[The World]</string>
+    <string name="message_boards">Message Boards</string>
+    <string name="bug_reports">Bug Reports</string>
+    <string name="staff">Staff</string>
+    <string name="feed">News Feed</string>
 
 
 </resources>
