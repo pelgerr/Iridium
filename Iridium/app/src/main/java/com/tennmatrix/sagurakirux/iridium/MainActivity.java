@@ -144,25 +144,66 @@ public class MainActivity extends AppCompatActivity
             view.loadUrl("http://forum.iridiumbased.com/");
             return true;
         } else if (id == R.id.new_posts) {
-            view.loadUrl("http://forum.iridiumbased.com/find-new/posts");
+            view.loadUrl("http://forum.iridiumbased.com/find-new/posts/");
             return true;
         } else if (id == R.id.shoutbox) {
             view.loadUrl("http://forum.iridiumbased.com/taigachat/");
             return true;
         } else if (id == R.id.pop_content) {
-            view.loadUrl("http://forum.iridiumbased.com/find-popular/content");
+            view.loadUrl("http://forum.iridiumbased.com/find-popular/content/");
             return true;
         } else if (id == R.id.inbox) {
             view.loadUrl("http://forum.iridiumbased.com/conversations/");
             return true;
         } else if (id == R.id.alerts) {
-            view.loadUrl("http://forum.iridiumbased.com/account/alerts");
+            view.loadUrl("http://forum.iridiumbased.com/account/alerts/");
             return true;
         } else if (id == R.id.feed) {
-            view.loadUrl("http://forum.iridiumbased.com/account/news-feed");
+            view.loadUrl("http://forum.iridiumbased.com/account/news-feed/");
             return true;
 
-         // General feedback
+        // Forums Navigation
+        } else if (id == R.id.announcements) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/announcements/");
+            return true;
+        } else if (id == R.id.progress) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/progress_updates/");
+            return true;
+        } else if (id == R.id.dev_blog) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/ramblings/");
+            return true;
+        } else if (id == R.id.message_board) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/world_bbs/");
+            return true;
+        } else if (id == R.id.bug_reports) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/bug-reports.26/");
+            return true;
+        } else if (id == R.id.team_info) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/dev_team/");
+            return true;
+        } else if (id == R.id.dev_info) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/dev_info/");
+            return true;
+        } else if (id == R.id.aqua) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/aqua_polis/");
+            return true;
+        } else if (id == R.id.events) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/Active_Spiraling_Abyss/");
+            return true;
+        } else if (id == R.id.art_gallery) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/art_gallery/");
+            return true;
+        } else if (id == R.id.multimedia) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/gaming_center/");
+            return true;
+        } else if (id == R.id.lost_grounds) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/Endless_Expansive_Cooperation/");
+            return true;
+        } else if (id == R.id.ooc) {
+            view.loadUrl("http://forum.iridiumbased.com/forums/Reality_Expansive_Illusion/");
+            return true;
+
+        // General feedback
         } else if (id == R.id.feedback){
             String uriText =
                     "mailto:rpelger1004@gmail.com" +
@@ -178,12 +219,12 @@ public class MainActivity extends AppCompatActivity
             }
             return true;
 
-            // Feedback item
+        // Bug report item
         } else if (id == R.id.bugs) {
             BugReport();
             return true;
 
-            // About app
+        // About app
         } else if (id == R.id.about) {
             Intent aboutIntent = new Intent(this, AboutActivity.class);
             startActivity(aboutIntent);

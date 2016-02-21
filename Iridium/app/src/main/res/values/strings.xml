@@ -33,8 +33,8 @@
     <string name="progress">Progress Updates</string>
     <string name="dev_blog">Developer Blog</string>
     <string name="the_world">[The World]</string>
-    <string name="message_boards">Message Boards</string>
-    <string name="bug_reports">Bug Reports</string>
+    <string name="message_board">[The World] Message Board</string>
+    <string name="bug_reports">[The World] Bug Reports</string>
     <string name="staff">Staff</string>
     <string name="team_info">Team Info</string>
     <string name="dev_info">Development Information</string>
