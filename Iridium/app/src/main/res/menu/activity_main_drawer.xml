@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/navigate">
+        <menu>
+            <item
+                android:id="@+id/search"
+                android:icon="@drawable/ic_search"
+                android:title="@string/search" />
+            <item
+                android:id="@+id/account"
+                android:icon="@drawable/ic_action_user"
+                android:title="@string/my_account" />
+            <item
+                android:id="@+id/forums"
+                android:icon="@drawable/ic_view_carousel"
+                android:title="@string/forums" />
+            <item
+                android:id="@+id/new_posts"
+                android:icon="@drawable/ic_view_list"
+                android:title="@string/new_posts" />
+            <item
+                android:id="@+id/shoutbox"
+                android:icon="@drawable/ic_action_dialog"
+                android:title="@string/shoutbox" />
+            <item
+                android:id="@+id/pop_content"
+                android:icon="@drawable/ic_action_star_10"
+                android:title="@string/pop_content" />
+        </menu>
+    </item>
+
+    <item android:title="@string/actions">
+        <menu>
+            <item
+                android:id="@+id/inbox"
+                android:icon="@drawable/ic_action_mail"
+                android:title="@string/inbox" />
+            <item
+                android:id="@+id/alerts"
+                android:icon="@drawable/ic_action_bell"
+                android:title="@string/alerts" />
+            <item
+                android:id="@+id/feed"
+                android:icon="@drawable/ic_action_feed"
+                android:title="@string/feed" />
+        </menu>
+    </item>
+
+    <item android:title="@string/root_town">
+        <menu>
+            <item
+                android:id="@+id/announcements"
+                android:title="@string/announcements" />
+            <item
+                android:id="@+id/progress"
+                android:title="@string/progress" />
+            <item
+                android:id="@+id/dev_blog"
+                android:title="@string/dev_blog" />
+            <item
+                android:id="@+id/message_board"
+                android:title="@string/message_board" />
+            <item
+                android:id="@+id/bug_reports"
+                android:title="@string/bug_reports" />
+            <item
+                android:id="@+id/team_info"
+                android:title="@string/team_info" />
+            <item
+                android:id="@+id/dev_info"
+                android:title="@string/dev_info" />
+            <item
+                android:id="@+id/aqua"
+                android:title="@string/aqua" />
+            <item
+                android:id="@+id/events"
+                android:title="@string/events" />
+            <item
+                android:id="@+id/art_gallery"
+                android:title="@string/art_gallery" />
+            <item
+                android:id="@+id/multimedia"
+                android:title="@string/multimedia" />
+            <item
+                android:id="@+id/lost_grounds"
+                android:title="@string/lost_grounds" />
+            <item
+                android:id="@+id/ooc"
+                android:title="@string/ooc" />
+        </menu>
+    </item>
+
+    <item android:title="@string/comm">
+        <menu>
+            <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/feedback" />
+            <item
+                android:id="@+id/bugs"
+                android:icon="@drawable/ic_action_bug"
+                android:title="@string/bugs" />
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_action_info"
+                android:title="@string/about"/>
+        </menu>
+    </item>
+</menu>
+
