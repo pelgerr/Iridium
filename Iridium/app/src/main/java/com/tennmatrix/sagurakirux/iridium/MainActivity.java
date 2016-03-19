@@ -3,10 +3,6 @@ package com.tennmatrix.sagurakirux.iridium;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,17 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,27 +30,9 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         view = (WebView) this.findViewById(R.id.Web_View);
+        view.setWebViewClient(new MainWebViewClient());
+        view.setWebChromeClient(new ChromeClient());
 
-        view.setWebChromeClient(new WebChromeClient() {
-            public void onProgressChanged(WebView view, int progress) {
-                //Make the bar disappear after URL is loaded, and changes string to Loading...
-                setTitle("Loading...");
-                setProgress(progress * 100); //Make the bar disappear after URL is loaded
-                // Return the app name after finish loading
-                if (progress == 100) {
-                    setTitle(R.string.app_name);
-                }
-            }
-        });
-
-        // Create a WebView client to handle URLs locally
-        view.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return false;
-            }
-        });
 
         String url = "http://forum.iridiumbased.com/";
         view.getSettings().setJavaScriptEnabled(true);
@@ -83,7 +56,25 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    private class MainWebViewClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return false;
+        }
+    }
 
+    private class ChromeClient extends WebChromeClient {
+        public void onProgressChanged(WebView view, int progress) {
+            //Make the bar disappear after URL is loaded, and changes string to Loading...
+            setTitle("Loading...");
+            setProgress(progress * 100); //Make the bar disappear after URL is loaded
+            // Return the app name after finish loading
+            if (progress == 100) {
+                setTitle(R.string.app_name);
+            }
+        }
+    }
 
     @Override
     public void onBackPressed() {
