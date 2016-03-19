@@ -3,10 +3,6 @@ package com.tennmatrix.sagurakirux.iridium;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,14 +14,8 @@ import android.view.MenuItem;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,6 +29,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         view = (WebView) this.findViewById(R.id.Web_View);
+        view.setWebViewClient(new MainWebViewClient());
 
         view.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView view, int progress) {
@@ -49,15 +40,6 @@ public class MainActivity extends AppCompatActivity
                 if (progress == 100) {
                     setTitle(R.string.app_name);
                 }
-            }
-        });
-
-        // Create a WebView client to handle URLs locally
-        view.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return false;
             }
         });
 
@@ -83,7 +65,13 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-
+    private class MainWebViewClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return false;
+        }
+    }
 
     @Override
     public void onBackPressed() {
